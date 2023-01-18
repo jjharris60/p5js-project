@@ -7,22 +7,27 @@ let prevY;
 let a3Inc;
 let a4Inc;
 
+function randomInteger(max) {
+    //Random colour
+    return Math.floor(Math.random() * (max + 1));
+}
+
 function setup() {
     createCanvas(windowWidth, windowHeight);
     angleMode(DEGREES);
-    background(255, 133, 87);
-    r1 = random(100, 300)
-    r2 = random(100, 300)
-    a3Inc = random(0, 1, 5)
-    a4Inc = random(0, 1, 5)
+    background(randomInteger(225), randomInteger(225), randomInteger(225));
+    r1 = random(300, 300)
+    r2 = random(300, 300)
+    a3Inc = random(0, 1, 100)
+    a4Inc = random(0, 1, 100)
 }
 
 function draw() {
     translate(width / 2, height / 2);
-    stroke('white')
+    stroke(randomInteger(225), randomInteger(225), randomInteger(225))
     strokeWeight(4.5)
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 50; i < 100; i++) {
         let x1 = r1 * cos(a1);
         let y1 = r1 * sin(a1);
         let x2 = x1 + r2 * cos(a2)
@@ -34,5 +39,6 @@ function draw() {
         a1 += a3Inc
         a2 += a4Inc
     }
+    console.log(prevX, prevY)
 
 }
