@@ -18,8 +18,8 @@ function setup() {
     background(randomInteger(225), randomInteger(225), randomInteger(225));
     r1 = random(300, 300)
     r2 = random(300, 300)
-    a3Inc = random(0, 1, 100)
-    a4Inc = random(0, 1, 100)
+    a3Inc = random(0, 1, 400)
+    a4Inc = random(0, 1, 400)
 }
 
 function draw() {
@@ -27,7 +27,10 @@ function draw() {
     stroke(randomInteger(225), randomInteger(225), randomInteger(225))
     strokeWeight(4.5)
 
-    for (let i = 50; i < 100; i++) {
+    for (let i = 0; i < 500; i++) {
+        if (i === 100) {
+            break;
+        }
         let x1 = r1 * cos(a1);
         let y1 = r1 * sin(a1);
         let x2 = x1 + r2 * cos(a2)
