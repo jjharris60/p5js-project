@@ -16,10 +16,10 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
     angleMode(DEGREES);
     background(randomInteger(225), randomInteger(225), randomInteger(225));
-    r1 = random(300, 300)
-    r2 = random(300, 300)
-    a3Inc = random(0, 1, 400)
-    a4Inc = random(0, 1, 400)
+    r1 = 300
+    r2 = 300
+    a3Inc = random(0, 1)
+    a4Inc = random(0, 1)
 }
 
 function draw() {
@@ -43,5 +43,4 @@ function draw() {
         a2 += a4Inc
     }
     console.log(prevX, prevY)
-
 }
